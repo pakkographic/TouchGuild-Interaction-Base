@@ -23,6 +23,6 @@ export class ExtendedClient extends Client {
                 constructedEvent.run(...args)
             );
         }
-        console.log("Events have successfully been loaded.");
+        console.log("Events have been successfully loaded.");
     }
 }

@@ -21,7 +21,7 @@ export default class ready extends EventBase {
             this.client.commands.set(name, constructedCommand);
             this.client.registerGlobalApplicationCommand(constructedCommand.appCommand);
         }
-        console.log("Commands have successfully been registered & loaded.");
+        console.log("Commands have been successfully registered & loaded.");
     }
 }
 
