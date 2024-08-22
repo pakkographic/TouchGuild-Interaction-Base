@@ -17,7 +17,7 @@ export default class ready extends EventBase {
         for (const nameWithExtension of commandFileNames) {
             const command: { default: Class<InteractionBase>; } = await import("../commands/" + nameWithExtension);
             const name = nameWithExtension.split(".")[0];
-            const constructedCommand = new (command.default)(this);
+            const constructedCommand = new (command.default)(this.client);
             this.client.commands.set(name, constructedCommand);
             this.client.registerGlobalApplicationCommand(constructedCommand.appCommand);
         }
