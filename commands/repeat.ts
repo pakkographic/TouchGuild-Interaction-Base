@@ -3,12 +3,13 @@ import {
     type AnyTextableChannel,
     ApplicationCommandOptionType,
     ApplicationCommandType,
-    type Client,
     type CommandInteraction
 } from "touchguild";
+import type { ExtendedClient } from "../structures/ExtendedClient";
+
 
 export default class repeat extends InteractionBase {
-    constructor(client: Client) {
+    constructor(client: ExtendedClient) {
         super(client,{
             name:    "repeat",
             type:    ApplicationCommandType.CHAT_INPUT,

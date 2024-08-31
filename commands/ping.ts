@@ -1,8 +1,9 @@
 import { InteractionBase } from "../structures/InteractionBase";
-import { type AnyTextableChannel, type CommandInteraction, ApplicationCommandType, type Client } from "touchguild";
+import { type AnyTextableChannel, type CommandInteraction, ApplicationCommandType } from "touchguild";
+import type { ExtendedClient } from "../structures/ExtendedClient";
 
 export default class ping extends InteractionBase {
-    constructor(client: Client) {
+    constructor(client: ExtendedClient) {
         super(client,{
             name: "ping",
             type: ApplicationCommandType.CHAT_INPUT
